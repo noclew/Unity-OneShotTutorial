@@ -13,12 +13,16 @@ public class ncPlayVideo : MonoBehaviour {
 	}
 		
 	void Start () {
+		movie.loop = true;
 		movie.Play();
 		aud.Play ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (!movie.isPlaying)
+			movie.Play ();
+		if (!aud.isPlaying)
+			aud.Play ();
 	}
 }

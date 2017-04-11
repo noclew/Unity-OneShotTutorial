@@ -12,8 +12,14 @@ public class nc360Controller : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//make balls
-		if (Input.GetKeyDown(KeyCode.Backspace))
+		
+		if(Input.anyKeyDown){
+
+			print(Input.inputString);
+
+		}
+
+		if (Input.GetKeyDown(KeyCode.Backspace) || Input.GetMouseButtonDown(1))
 		{
 			SceneManager.LoadScene("main");
 		}

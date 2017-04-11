@@ -21,12 +21,10 @@ public class ncGazeController : MonoBehaviour {
 			print ("I'm looking at " + hit.transform.name);
 
 			//this is just for demo. The better way is to create a behavior script and add it to each interactive object.
-			if (Input.GetMouseButtonDown (0)) {
+			if (Input.GetMouseButtonDown(0)) {
 				print ("Pressed left click on this object.");
 				Renderer rend = hit.transform.GetComponent<Renderer> ();
 				rend.material.color = Color.green;
-
-
 			}
 		}
 	}
